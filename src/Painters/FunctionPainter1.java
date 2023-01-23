@@ -3,13 +3,14 @@ package Painters;
 import java.awt.*;
 
 import Converter.Converter;
+import Fun.Function1;
 import Fun.Invoke;
 
 public class FunctionPainter1 implements Painter {
     private Color clr;
     private Converter cnv;
-    private Invoke f;
-   public FunctionPainter1(Converter cnv, Invoke f, Color color){
+    private Function1 f;
+   public FunctionPainter1(Converter cnv, Function1 f, Color color){
        this.f = f;
        this.clr = color;
        this.cnv = cnv;
@@ -18,9 +19,9 @@ public class FunctionPainter1 implements Painter {
             g.setColor(clr);
             for (int i = 0; i < width - 1; i++) {
                 double x1Crt = cnv.xScr2Crt(i);
-                double y1Crt = (double)f.invoke(x1Crt);
+                double y1Crt = f.invoke(x1Crt);
                 double x2Crt = cnv.xScr2Crt(i + 1);
-                double y2Crt = (double)f.invoke(x2Crt);
+                double y2Crt = f.invoke(x2Crt);
                 g.drawLine(cnv.xCrt2Scr(x1Crt), cnv.yCrt2Scr(y1Crt), cnv.xCrt2Scr(x2Crt), cnv.yCrt2Scr(y2Crt));
 
             }
@@ -30,7 +31,7 @@ public class FunctionPainter1 implements Painter {
         this.clr = clr;
     }
 
-    public void setF(Invoke f) {
+    public void setF(Function1 f) {
         this.f = f;
     }
 }

@@ -4,6 +4,7 @@ import Converter.Converter;
 import Fun.Function1;
 import Painters.CartesianPainter;
 import Painters.FunctionPainter1;
+import Painters.FunctionPainter2;
 import Painters.PointsPainter;
 import Fun.Pair;
 
