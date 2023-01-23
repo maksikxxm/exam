@@ -1,8 +1,8 @@
-import math.Invoke;
+package Fun;
 
 public class Function1 implements Invoke {
     @Override
-    public double invoke(double x) {
+    public Double invoke(Double x) {
         return -x*x+1.0/x;
     }
 }

@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../Converter/Converter.iml" filepath="$PROJECT_DIR$/../Converter/Converter.iml" />
       <module fileurl="file://$PROJECT_DIR$/Window.iml" filepath="$PROJECT_DIR$/Window.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../hello wotld/hello wotld.iml" filepath="$PROJECT_DIR$/../hello wotld/hello wotld.iml" />
     </modules>
   </component>
 </project>

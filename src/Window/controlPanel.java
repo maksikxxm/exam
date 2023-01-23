@@ -1,18 +1,16 @@
 package Window;
 
 import Converter.Converter;
+import Fun.Function1;
 import Painters.CartesianPainter;
-import Painters.FunctionPainter;
+import Painters.FunctionPainter1;
 import Painters.PointsPainter;
-import math.Newton;
-import math.Pair;
+import Fun.Pair;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class controlPanel extends JPanel {
     //region Поля
@@ -21,8 +19,6 @@ public class controlPanel extends JPanel {
     Checkbox Derivative = new Checkbox();
     GraphicsPanel mainPanel;
     int SpinnerMinHor = 50;
-    Map<Double,Double> tmp = new HashMap<>();
-
     int SpinnerPrefHor = GroupLayout.PREFERRED_SIZE;
     int SpinnerMaxHor = Integer.MAX_VALUE;
 
@@ -71,9 +67,9 @@ public class controlPanel extends JPanel {
                 mainPanel.removeAllPainters();
                 mainPanel.addPainter(new CartesianPainter(conv, Color.BLACK));
                 if(Function.getState())
-                    mainPanel.addPainter(new FunctionPainter(conv, new Newton(tmp),polynomialColorPanel.getBackground()));
+                    mainPanel.addPainter(new FunctionPainter1(conv, new Function1(),polynomialColorPanel.getBackground()));
                 if(Derivative.getState())
-                    mainPanel.addPainter(new FunctionPainter(conv,new Newton(tmp).derivative(),derivativeColorPanel.getBackground()));
+                    mainPanel.addPainter(new FunctionPainter1(conv,new Function1(),derivativeColorPanel.getBackground()));
                 if(Point.getState())
                     mainPanel.addPainter(new PointsPainter(conv,Points,pointColorPanel.getBackground()));
                 mainPanel.repaint();
@@ -88,9 +84,9 @@ public class controlPanel extends JPanel {
                 mainPanel.removeAllPainters();
                 mainPanel.addPainter(new CartesianPainter(conv, Color.BLACK));
                 if(Function.getState())
-                    mainPanel.addPainter(new FunctionPainter(conv, new Newton(tmp),polynomialColorPanel.getBackground()));
+                    mainPanel.addPainter(new FunctionPainter1(conv, new Function1(),polynomialColorPanel.getBackground()));
                 if(Derivative.getState())
-                    mainPanel.addPainter(new FunctionPainter(conv,new Newton(tmp).derivative(),derivativeColorPanel.getBackground()));
+                    mainPanel.addPainter(new FunctionPainter1(conv,new Function1(),derivativeColorPanel.getBackground()));
                 if(Point.getState())
                     mainPanel.addPainter(new PointsPainter(conv,Points,pointColorPanel.getBackground()));
                 mainPanel.repaint();
@@ -105,9 +101,9 @@ public class controlPanel extends JPanel {
                 mainPanel.removeAllPainters();
                 mainPanel.addPainter(new CartesianPainter(conv, Color.BLACK));
                 if(Function.getState())
-                    mainPanel.addPainter(new FunctionPainter(conv, new Newton(tmp),polynomialColorPanel.getBackground()));
+                    mainPanel.addPainter(new FunctionPainter1(conv, new Function1(),polynomialColorPanel.getBackground()));
                 if(Derivative.getState())
-                    mainPanel.addPainter(new FunctionPainter(conv,new Newton(tmp).derivative(),derivativeColorPanel.getBackground()));
+                    mainPanel.addPainter(new FunctionPainter1(conv,new Function1(),derivativeColorPanel.getBackground()));
                 if(Point.getState())
                     mainPanel.addPainter(new PointsPainter(conv,Points,pointColorPanel.getBackground()));
                 mainPanel.repaint();
@@ -133,9 +129,9 @@ public class controlPanel extends JPanel {
                         mainPanel.getWidth(),mainPanel.getHeight());
                 mainPanel.addPainter(new CartesianPainter(conv, Color.BLACK));
                 if(Function.getState())
-                    mainPanel.addPainter(new FunctionPainter(conv, new Newton(tmp),polynomialColorPanel.getBackground()));
+                    mainPanel.addPainter(new FunctionPainter1(conv, new Function1(),polynomialColorPanel.getBackground()));
                 if(Derivative.getState())
-                    mainPanel.addPainter(new FunctionPainter(conv,new Newton(tmp).derivative(),derivativeColorPanel.getBackground()));
+                    mainPanel.addPainter(new FunctionPainter1(conv,new Function1(),derivativeColorPanel.getBackground()));
                 if(Point.getState())
                     mainPanel.addPainter(new PointsPainter(conv,Points,pointColorPanel.getBackground()));
                 mainPanel.repaint();
@@ -171,9 +167,9 @@ public class controlPanel extends JPanel {
                         mainPanel.getWidth(),mainPanel.getHeight());
                 mainPanel.addPainter(new CartesianPainter(conv, Color.BLACK));
                 if(Function.getState())
-                    mainPanel.addPainter(new FunctionPainter(conv, new Newton(tmp),polynomialColorPanel.getBackground()));
+                    mainPanel.addPainter(new FunctionPainter1(conv, new Function1(),polynomialColorPanel.getBackground()));
                 if(Derivative.getState())
-                    mainPanel.addPainter(new FunctionPainter(conv,new Newton(tmp).derivative(),derivativeColorPanel.getBackground()));
+                    mainPanel.addPainter(new FunctionPainter1(conv,new Function1(),derivativeColorPanel.getBackground()));
                 if(Point.getState())
                     mainPanel.addPainter(new PointsPainter(conv,Points,pointColorPanel.getBackground()));
                 mainPanel.repaint();
@@ -214,9 +210,9 @@ public class controlPanel extends JPanel {
                         mainPanel.getWidth(),mainPanel.getHeight());
                 mainPanel.addPainter(new CartesianPainter(conv, Color.BLACK));
                 if(Function.getState())
-                    mainPanel.addPainter(new FunctionPainter(conv, new Newton(tmp),polynomialColorPanel.getBackground()));
+                    mainPanel.addPainter(new FunctionPainter1(conv, new Function1(),polynomialColorPanel.getBackground()));
                 if(Derivative.getState())
-                    mainPanel.addPainter(new FunctionPainter(conv,new Newton(tmp).derivative(),derivativeColorPanel.getBackground()));
+                    mainPanel.addPainter(new FunctionPainter1(conv,new Function1(),derivativeColorPanel.getBackground()));
                 if(Point.getState())
                     mainPanel.addPainter(new PointsPainter(conv,Points,pointColorPanel.getBackground()));
                 mainPanel.repaint();
@@ -252,9 +248,9 @@ public class controlPanel extends JPanel {
             mainPanel.removeAllPainters();
             mainPanel.addPainter(new CartesianPainter(conv, Color.BLACK));
             if(Function.getState())
-                mainPanel.addPainter(new FunctionPainter(conv, new Newton(tmp),polynomialColorPanel.getBackground()));
+                mainPanel.addPainter(new FunctionPainter1(conv, new Function1(),polynomialColorPanel.getBackground()));
             if(Derivative.getState())
-                mainPanel.addPainter(new FunctionPainter(conv,new Newton(tmp).derivative(),derivativeColorPanel.getBackground()));
+                mainPanel.addPainter(new FunctionPainter1(conv,new Function1(),derivativeColorPanel.getBackground()));
             if(Point.getState())
                 mainPanel.addPainter(new PointsPainter(conv,Points,pointColorPanel.getBackground()));
 
@@ -268,9 +264,9 @@ public class controlPanel extends JPanel {
             mainPanel.removeAllPainters();
             mainPanel.addPainter(new CartesianPainter(conv, Color.BLACK));
             if(Function.getState())
-                mainPanel.addPainter(new FunctionPainter(conv, new Newton(tmp),polynomialColorPanel.getBackground()));
+                mainPanel.addPainter(new FunctionPainter1(conv, new Function1(),polynomialColorPanel.getBackground()));
             if(Derivative.getState())
-                mainPanel.addPainter(new FunctionPainter(conv,new Newton(tmp).derivative(),derivativeColorPanel.getBackground()));
+                mainPanel.addPainter(new FunctionPainter1(conv,new Function1(),derivativeColorPanel.getBackground()));
             if(Point.getState())
                 mainPanel.addPainter(new PointsPainter(conv,Points,pointColorPanel.getBackground()));
 
@@ -285,9 +281,9 @@ public class controlPanel extends JPanel {
             mainPanel.removeAllPainters();
             mainPanel.addPainter(new CartesianPainter(conv, Color.BLACK));
             if(Function.getState())
-                mainPanel.addPainter(new FunctionPainter(conv, new Newton(tmp),polynomialColorPanel.getBackground()));
+                mainPanel.addPainter(new FunctionPainter1(conv, new Function1(),polynomialColorPanel.getBackground()));
             if(Derivative.getState())
-                mainPanel.addPainter(new FunctionPainter(conv,new Newton(tmp).derivative(),derivativeColorPanel.getBackground()));
+                mainPanel.addPainter(new FunctionPainter1(conv,new Function1(),derivativeColorPanel.getBackground()));
             if(Point.getState())
                 mainPanel.addPainter(new PointsPainter(conv,Points,pointColorPanel.getBackground()));
 
@@ -301,9 +297,9 @@ public class controlPanel extends JPanel {
             mainPanel.removeAllPainters();
             mainPanel.addPainter(new CartesianPainter(conv, Color.BLACK));
             if(Function.getState())
-                mainPanel.addPainter(new FunctionPainter(conv, new Newton(tmp),polynomialColorPanel.getBackground()));
+                mainPanel.addPainter(new FunctionPainter1(conv, new Function1(),polynomialColorPanel.getBackground()));
             if(Derivative.getState())
-                mainPanel.addPainter(new FunctionPainter(conv,new Newton(tmp).derivative(),derivativeColorPanel.getBackground()));
+                mainPanel.addPainter(new FunctionPainter1(conv,new Function1(),derivativeColorPanel.getBackground()));
             if(Point.getState())
                 mainPanel.addPainter(new PointsPainter(conv,Points,pointColorPanel.getBackground()));
 
@@ -320,10 +316,10 @@ public class controlPanel extends JPanel {
                         mainPanel.getWidth(),mainPanel.getHeight());
                 mainPanel.removeAllPainters();
                 mainPanel.addPainter(new CartesianPainter(conv, Color.BLACK));
-                if(Function.getState() && tmp.get(0)!=null )
-                    mainPanel.addPainter(new FunctionPainter(conv, new Newton(tmp),polynomialColorPanel.getBackground()));
-                if(Derivative.getState()&& tmp.get(0)!=null)
-                    mainPanel.addPainter(new FunctionPainter(conv,new Newton(tmp).derivative(),derivativeColorPanel.getBackground()));
+                if(Function.getState())
+                    mainPanel.addPainter(new FunctionPainter1(conv, new Function1(),polynomialColorPanel.getBackground()));
+                if(Derivative.getState())
+                    mainPanel.addPainter(new FunctionPainter1(conv,new Function1(),derivativeColorPanel.getBackground()));
                 if(Point.getState())
                     mainPanel.addPainter(new PointsPainter(conv,Points,pointColorPanel.getBackground()));
                 mainPanel.repaint();
@@ -333,65 +329,6 @@ public class controlPanel extends JPanel {
         mainPanel.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                if(e.getButton() == 1)
-                {
-                    Converter conv = new Converter((double) XminSpinner.getValue(),(double) XmaxSpinner.getValue(),
-                            (double) YminSpinner.getValue(),(double) YmaxSpinner.getValue(),
-                            mainPanel.getWidth(),mainPanel.getHeight());
-                    if(Points.size()==0)
-                    {
-                        Points.add(new Pair(conv.xScr2Crt(e.getX()), conv.yScr2Crt(e.getY())));
-                    }
-                    else
-                    {
-                        for (int i = 0; i< Points.size(); i++) {
-                            if (conv.xDistCrt2Scr(conv.xScr2Crt(e.getX()), Points.get(i).getX()) <
-                                    conv.xDistCrt2Scr(0.0, Math.max(((double) (XmaxSpinner.getValue()) - (double) XminSpinner.getValue()) / 100., 0.15))) {
-                                return;
-                            }
-                        }
-                                Points.add(new Pair(conv.xScr2Crt(e.getX()), conv.yScr2Crt(e.getY())));
-                    }
-                    for(int i=0; i<Points.size();i++)
-                        tmp.put(Points.get(i).getX(),Points.get(i).getY());
-                    mainPanel.removeAllPainters();
-                    mainPanel.addPainter(new CartesianPainter(conv,Color.black));
-                    if(Function.getState())
-                        mainPanel.addPainter(new FunctionPainter(conv, new Newton(tmp),polynomialColorPanel.getBackground()));
-                    if(Derivative.getState())
-                        mainPanel.addPainter(new FunctionPainter(conv,new Newton(tmp).derivative(),derivativeColorPanel.getBackground()));
-                    if(Point.getState())
-                        mainPanel.addPainter(new PointsPainter(conv,Points,pointColorPanel.getBackground()));
-                    mainPanel.repaint();
-
-                }
-                else
-                {
-                    Converter cnv = new Converter((double) XminSpinner.getValue(),(double) XmaxSpinner.getValue(),
-                            (double) YminSpinner.getValue(),(double) YmaxSpinner.getValue(),
-                            mainPanel.getWidth(),mainPanel.getHeight());
-                    for (int i =0;i<Points.size();i++) {
-                        if (cnv.xDistCrt2Scr(cnv.xScr2Crt(e.getX()), Points.get(i).getX()) <
-                                cnv.xDistCrt2Scr(0.0, Math.min(((double) (XmaxSpinner.getValue()) - (double) XminSpinner.getValue()) / 100., 0.05)) &&
-                                cnv.yDistCrt2Scr(cnv.yScr2Crt(e.getY()), Points.get(i).getY()) <
-                                        cnv.xDistCrt2Scr(0.0, Math.min(((double) (XmaxSpinner.getValue()) - (double) XminSpinner.getValue()) / 100., 0.05))) {
-
-                            Points.remove(i);
-                        tmp.clear();
-                        for(int j=0; j<Points.size();j++)
-                            tmp.put(Points.get(j).getX(),Points.get(j).getY());
-                        mainPanel.removeAllPainters();
-                        mainPanel.addPainter(new CartesianPainter(cnv,Color.black));
-                        if(Function.getState())
-                            mainPanel.addPainter(new FunctionPainter(cnv, new Newton(tmp),polynomialColorPanel.getBackground()));
-                        if(Derivative.getState())
-                            mainPanel.addPainter(new FunctionPainter(cnv,new Newton(tmp).derivative(),derivativeColorPanel.getBackground()));
-                        if(Point.getState())
-                            mainPanel.addPainter(new PointsPainter(cnv,Points,pointColorPanel.getBackground()));
-                        mainPanel.repaint();
-                        }
-                    }
-                }
 
             }
 

@@ -1,13 +1,11 @@
 package Painters;
 
 import Converter.Converter;
-import math.Pair;
+import Fun.Pair;
 
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
 
 public class PointsPainter implements Painter {
     private Color clr;
